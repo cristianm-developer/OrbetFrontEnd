@@ -3,9 +3,9 @@ import './profileIcon.css';
 const ProfileIcon = (({isOpen}) => {
     return <a className={`profileIcon ${isOpen? 'openObj' : ''}`}> 
         <div className='wrapperProfileIcon'>
-            <img className='profilePhoto' src="imgs/StrongMan.png"/>
+            <img className='profilePhoto' src="./resources/imgs/StrongMan.png"/>
             <div className='wrapperFlex subText'>
-                <img src='icons/gear.svg' className='icon-small'></img>
+                <img src='./resources/icons/gear.svg' className='icon-small'></img>
                 <span>VIP</span>
             </div>
             <div className='bg'></div>
