@@ -1,0 +1,18 @@
+.buttonBase{
+
+    background: var( --Background-Color-D1);
+    background: linear-gradient(200deg, rgb(11, 11, 11) 0%, var( --Background-Color-D1) 100%);
+    padding: 2px 3px;
+    border-radius: 8px;
+    height: 100%;
+    min-width: 40px;
+    color: white;   
+    position: relative;
+    overflow: hidden;
+
+    filter: drop-shadow(1px -1px 0px var(--Color-Primary-Fade)) drop-shadow(1px 1px 0px var(--Color-Primary-Fade-2));
+}
+
+.buttonBase:hover{
+    filter: drop-shadow(1px -1px 0px var(--Color-Primary-Fade)) drop-shadow(1px 1px 0px var(--Color-Primary-Fade-2)) drop-shadow(0px 0px 6px var(--Color-Primary-D1));
+}

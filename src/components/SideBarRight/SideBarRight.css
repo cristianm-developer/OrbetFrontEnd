@@ -1,0 +1,21 @@
+#SideBarRight{
+    background-color: var(--Background-Color-D1);
+    width: 100%;
+    height: min-content;
+    border-radius: 15px;
+    color: white;
+
+    section{
+        padding: 12px;
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        height: max-content;
+    }
+
+    .logoutButton{
+        width: 100%;
+        gap: 12px;
+        justify-content: center;
+    }
+}

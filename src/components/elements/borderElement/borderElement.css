@@ -1,0 +1,22 @@
+.borderWrapper >div{
+    position: absolute;
+    content: '';
+}
+
+.borderPathDown{
+    height: 1px;
+    width: 100%;
+    
+    bottom: 0px;
+    left: 0;
+    background: linear-gradient(to left, rgba(255, 255, 255, 0.08) 0%,  rgba(27, 26, 26, 0) 40%);
+}
+
+.borderPathLeft{
+    height: 100%;
+    width: 1px;
+    
+    top: 0;
+    left: 0;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.08) 0%,  rgba(27, 26, 26, 0) 60%);
+}

@@ -1,0 +1,77 @@
+#Logo{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    height: 64px;
+    padding: 20px 10px ;
+    color: white;
+    position: relative;
+    gap: 12px;
+
+    img{
+        width: 50px;
+    }
+
+    i{
+        cursor: pointer;
+        border-radius: 0 15px 15px 0;
+        position: absolute;
+        background-color: var(--Background-Sidebar-Color);
+        height: 77px;
+        width: 30px;
+        right: -30px;
+        top: 0;
+        display: flex;
+        align-items: center; 
+        clip-path: path('m0 82.944c0-4.608 0-9.216 4.608-13.824l13.824-9.216s9.216-4.608 9.216-13.824v-36.864c0-9.216-4.608-9.216-9.216-9.216h-18.432z');
+        background-color: var(--Background-Color-D1);
+
+        img{
+            translate: -3px -5px;
+            rotate: 180deg;
+            height: 25px;
+            
+        }
+
+    }
+
+    h2{
+        display: flex;
+        flex: 1;
+        overflow: hidden;
+        text-overflow: clip;
+        max-width: 0;
+        transition: max-width var(--Animation-speed) ease-in-out;
+    }
+
+}
+
+#LogoImg{
+    cursor: pointer;
+    filter: drop-shadow(0px 0px 2px var(--Color-Primary));
+    transition: filter var(--Animation-speed) ease-in-out;
+}
+
+#LogoImg:hover {
+    filter: drop-shadow(0px 0px 4px var(--Color-Primary));
+}
+
+#arrowIcon{
+    filter: drop-shadow(0px 0px 2px rgba(255, 255, 255, 0.425));
+    transition: filter var(--Animation-speed) ease-in-out;
+}
+#arrowIcon:hover{
+    filter: drop-shadow(0px 0px 2px white);
+}
+
+.extended #Logo{
+    #arrowIcon{
+        transform: rotate(180deg);
+    }
+
+    h2{
+        max-width: 200px;
+    }
+
+}

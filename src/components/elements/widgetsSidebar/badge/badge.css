@@ -1,0 +1,107 @@
+a.badge{
+    display: flex;
+    flex-direction: column;
+    color: white;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+    height: auto;
+    width: 100%;
+    padding: 5px 0;
+
+    .badgeImage{
+        object-fit: cover;
+        top: 0px;
+        width: 35px;
+        transition: width var(--Animation-speed) ease-in-out;
+        filter: drop-shadow(0px 0px 3px rgba(255, 255, 255, 0.589));
+        transition: filter var(--Animation-speed) ease-in-out;
+    }
+    
+    span{
+    
+        top: 35px;
+    }
+
+    .extendedVersion{
+        width: 100%;
+        opacity: 0;
+        overflow: hidden;
+        height: 0px;
+        transition: height var(--Animation-speed) ease-in-out, opacity var(--Animation-speed) ease-in-out;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        >.loadingBarWrapper{
+            width: 90%;
+            padding: 0 12px;
+            display: flex;
+            justify-content: center;
+            height: 14px;
+            border-radius: 6px;
+            border: solid rgba(255, 255, 255, 0.014) 1px;
+        }
+    
+        .moneyAmountWrapper{
+            padding: 0 12px;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+
+    .shortVersion,.moneyHaving{
+        padding-top: 2px;
+        height: auto;
+        font-size: small;
+        transition: height var(--Animation-speed) ease-in-out, opacity var(--Animation-speed) ease-in-out;
+        color: var(--Color-Primary-L1);
+        filter: drop-shadow(0px 0px 4px var(--Color-Primary));
+    }
+
+    .titleBadge{
+        color: var(--Color-Primary);
+        padding: 3px 0px;
+        opacity: 0;
+        height: 0px;
+        text-align: center;
+        transition: height var(--Animation-speed) ease-in-out, opacity var(--Animation-speed) ease-in-out;
+    }
+
+    .moneyObjetive{
+        color: var(--Color-Primary-D1);
+        font-size: small;
+    }
+}
+
+
+.extended a.badge{
+
+    
+    .badgeImage{
+        width: 55px;
+        filter: drop-shadow(0px 0px 15px rgba(255, 255, 255, 0.589));
+    }
+
+    .titleBadge{
+        opacity: 1;
+        height: auto;
+        height: calc-size(auto);
+        text-align: center;
+    }
+
+    .extendedVersion{
+        opacity: 1;
+        height: auto;
+        height: calc-size(auto);
+        overflow: visible;
+    }
+
+    .shortVersion{
+        height: 0px;
+        overflow: hidden;
+    }
+}
+
+

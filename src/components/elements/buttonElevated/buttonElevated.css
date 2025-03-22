@@ -1,0 +1,7 @@
+.buttonElevated{
+    height: 100%;
+    padding: 6px 16px;
+    display: flex;
+    align-items: center;
+    background-color: rgb(46, 14, 14);
+}

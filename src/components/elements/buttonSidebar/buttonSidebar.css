@@ -1,0 +1,133 @@
+.buttonSidebar{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 0px 12px;
+    color: white;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+
+    .buttonContainer{
+        display: flex;
+        flex: 1;
+        gap: 12px;
+        align-items: center;
+        justify-content: center;
+
+        .btnTitle{
+            overflow: hidden;
+            max-width: 0;
+            display: none;
+        }
+
+        .icon{
+            display: flex;
+            align-items: center;
+
+            z-index: 4;
+            justify-content: center;
+        }
+    }
+    
+    .buttonSidebarWrapper{
+        width: 40px;
+        height: 40px;
+        padding: 4px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        z-index: 1;
+        filter: drop-shadow(1px -1px 0px var(--Color-Primary-D2) );
+    }
+    
+    .buttonSidebarWr2apper::after{
+        width: 25px;
+        height: 25px;
+        bottom: 4px;
+        left: 0;
+        display: flex;
+        content: '';
+        position: absolute;
+        z-index: 2;
+        background: radial-gradient(circle, rgba(0,0,0,0) 0%, rgb(0, 0, 0,1) 50%);
+    }
+    
+    .buttonSidebarWrapper::before{
+        clip-path: path('M 35.6507 8.9547 C 35.7543 9.2094 35.7872 10.0467 35.7872 10.0467 V 33.0567 C 35.7872 33.0567 35.8735 33.9567 35.0462 34.7532 C 33.9932 35.7672 32.9012 35.5917 32.9012 35.5917 H 10.0472 C 10.0472 35.5917 9.2468 35.5227 8.9942 35.4162 C 8.6964 35.2906 8.0481 34.6662 8.0481 34.6662 L 3.2349 29.7308 C 3.2349 29.7308 2.7674 29.2442 2.6763 29.0201 C 2.5478 28.7044 2.5593 27.6746 2.5593 27.6746 V 4.8986 C 2.5593 4.8986 2.5225 3.9649 3.4563 3.0656 C 4.5093 2.0516 5.8353 2.3246 5.8353 2.3246 H 28.1433 C 28.1433 2.3246 29.0011 2.3265 29.2743 2.4416 C 29.5133 2.5424 30.0534 3.0676 30.0534 3.0676 L 34.9435 8.0816 C 34.9435 8.0818 35.5368 8.6749 35.6508 8.9547 Z');
+        width: 38px;
+        height: 38px;
+        left: 1px;
+        top: 1px;
+        background-color: #0d1010;
+        position: absolute;
+        z-index: 3;
+        content: '';
+    }
+
+    .hoverSignal{
+        display: none;     
+        position: absolute;
+    } 
+    
+    .activeSignal{
+        content: '';
+        z-index: 2;
+        width: 5px;
+        height: 5px;
+        right: 12px;
+        position: absolute;
+        border-radius: 50%;
+        background-color: var(--Color-Primary);
+        display: none;
+        box-shadow: 0px 0px 8px 1px var(--Color-Primary);
+    }
+
+    
+}
+
+.buttonSidebar:hover{
+
+    color: var(--Color-Primary);
+
+    .hoverSignal{
+        display: block;
+        height: 100%;
+        width: 4px;
+        left: -2px;
+        filter: drop-shadow(0px 0px 1px var(--Color-Primary)) drop-shadow(0px 0px 25px var(--Color-Primary)) drop-shadow(0px 0px 25px var(--Color-Primary));
+    }
+
+
+    .hoverSignal::after{
+        display: block;
+        height: 100%;
+        width: 2px;
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        clip-path: polygon(0 0, 100% 10%, 100% 90%, 0% 100%);
+        background-color: var(--Color-Primary);
+    }
+
+}
+
+.buttonSidebar.active{
+    color: var(--Color-Primary);
+    .activeSignal{
+        display: block;
+    }
+}
+
+.extended .buttonSidebar{
+
+
+   .btnTitle{
+        flex: 1;
+        display: block;
+        max-width:  100%;
+    }
+}

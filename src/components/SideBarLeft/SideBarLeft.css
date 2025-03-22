@@ -1,0 +1,50 @@
+#SidebarLeft{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    background-color: var( --Background-Color-D1);
+    border-radius: 25px 0px 25px 25px;
+    gap: 10px;
+    grid-row: span 2;
+    width: 100%;
+    transition: width var(--Animation-speed) ease-in-out;
+    z-index: 3;
+    
+    filter: drop-shadow(1px -1px 0px var(--Color-Primary-Fade));
+
+
+    #SidebarLeftBody{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        width: 100%;
+    }
+
+    #LogoWrapper{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    #buttons{
+        width: 100%;
+        height: auto;
+    }
+}
+
+#SidebarLeft.extended{
+    width: 220px;
+}
+
+#SidebarWidgets{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 16px;
+    padding: 12px 0px;
+}
+
+br{
+    width: 70%;
+}

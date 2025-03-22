@@ -1,0 +1,96 @@
+#TopBar{
+    display: flex;
+    grid-column-start: 3;
+    grid-column-end: -1;
+    gap: 12px;
+    color: white;
+    justify-content: space-between;
+
+    a.profileIcon{
+        padding: 0px;
+        cursor: pointer;
+    }
+
+    .buttonBase{
+        cursor: pointer;
+    }
+
+    .rewardBtn{
+        gap: 6px;
+        padding: 0 6px;
+    }
+
+
+#TopBarSearch{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+#TopBarWallet{
+    display: flex;
+    position: relative;
+
+    h3{
+        display: flex;
+        padding: 0px 12px;
+    }
+}
+
+#TopBarWallet::after{
+    pointer-events: none;
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0;
+    background-color: var(--color-Primary-D0);
+    filter: blur(55px);
+    z-index: 10;
+
+}
+
+#TopBarUser{
+    display: flex;
+    gap: 8px;
+
+    
+    .profileIcon{
+        width: 55px 
+    }
+}
+
+.inputSearch{
+    padding: 0 8px;
+    display: flex;
+    gap: 12px;
+    input{
+        color: white;
+        width: 20vw;
+        max-width: 160px;
+    }    
+}
+
+.buttonWithLoadingBar{
+    padding: 0px 12px;
+
+    .textoTop{
+        display: flex;
+        gap: 12px;
+    }
+}
+
+.buttonElevated{
+    background: linear-gradient(175deg, var(--Color-Primary-D1) 0%, var(--Color-Primary-D2) 50%, var(--Color-Primary-D1) 100%);
+    border: solid 1px var(--Color-Primary-Fade);
+    filter: drop-shadow(1px -1px 0px var(--color-Primary-D0));
+    cursor: pointer;
+
+}
+
+.buttonElevated:hover{
+    filter: brightness(1.4);
+}
+
+}
