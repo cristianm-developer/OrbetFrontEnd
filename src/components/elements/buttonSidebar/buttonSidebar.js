@@ -8,8 +8,8 @@ const ButtonSidebar = ( ({isActive}) => {
                 <img className='icon' src="icons/gear.svg"></img>
             </div>
             <span className='btnTitle'>Home</span>
+            <div className='activeSignal'></div>
         </div>
-        <div className='activeSignal'></div>
     </a>
 })
 

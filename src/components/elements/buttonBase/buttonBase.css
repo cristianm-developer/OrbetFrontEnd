@@ -9,7 +9,7 @@
     color: white;   
     position: relative;
     overflow: hidden;
-
+    transition: filter var(--Animation-speed) ease-in-out;
     filter: drop-shadow(1px -1px 0px var(--Color-Primary-Fade)) drop-shadow(1px 1px 0px var(--Color-Primary-Fade-2));
 }
 

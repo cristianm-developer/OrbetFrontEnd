@@ -65,7 +65,7 @@
     filter: drop-shadow(0px 0px 2px white);
 }
 
-.extended #Logo{
+.extended #Logo, #SidebarLeft:hover #Logo{
     #arrowIcon{
         transform: rotate(180deg);
     }

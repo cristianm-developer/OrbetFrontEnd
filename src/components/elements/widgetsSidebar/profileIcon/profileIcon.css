@@ -67,52 +67,8 @@ a.profileIcon{
     }
 }
 
-.openSideBar a.profileIcon, .extended a.profileIcon{
+.openSideBar a.profileIcon, .extended a.profileIcon, #SidebarLeft:hover a.profileIcon{
     .nome{
         max-width: 100%;
     }
 }
-
-/* a.profileIcon{
-    display: flex;
-    flex-direction: column;
-    color: white;
-    justify-content: flex-start;
-    align-items: center;
-    position: relative;
-    height: 65px;
-    width: 100%;
-
-    img{
-        position: absolute;
-        top: 0px;
-        width: 50px;
-        object-fit: cover;
-        border-radius: 50%;
-    }
-    
-    
-    
-    span::before {
-        content: '';
-        width: 140%;
-        height: 80%;
-        top: 20%;
-        left: -3px;
-        transform: translateX(-8%) skewX(-10deg);
-        position: absolute;
-        background-color: var(--Color-Primary);
-        z-index: -1;  
-        border-radius: 2px;
-    }
-    
-    span {
-        z-index: 1;  
-        color: white;
-        position: absolute;
-        top: 35px;
-        left: 20px; 
-    }
-}
-
- */

@@ -34,6 +34,7 @@
     h3{
         display: flex;
         padding: 0px 12px;
+        z-index: 5;
     }
 }
 
@@ -45,7 +46,7 @@
     position: absolute;
     top: 0px;
     left: 0;
-    background-color: var(--color-Primary-D0);
+    background-color: var(--Color-Primary-D0);
     filter: blur(55px);
     z-index: 10;
 
@@ -86,11 +87,17 @@
     border: solid 1px var(--Color-Primary-Fade);
     filter: drop-shadow(1px -1px 0px var(--color-Primary-D0));
     cursor: pointer;
+    filter: brightness(1);
+    transition: filter var(--Animation-speed) ease-in-out;
 
 }
 
 .buttonElevated:hover{
-    filter: brightness(1.4);
+    filter: brightness(1.8);
 }
 
+}
+
+#MenuBtn{
+    z-index: 6;
 }

@@ -33,7 +33,7 @@
     }
 }
 
-#SidebarLeft.extended{
+#SidebarLeft.extended, .App:has(#expandArrow:hover) #SidebarLeft, #SidebarLeft:hover{
     width: 220px;
 }
 

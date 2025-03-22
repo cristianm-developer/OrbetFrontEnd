@@ -59,7 +59,9 @@ const TopBar = (() => {
             <ButtonBase content={
                 <img className='icon' src="icons/gear.svg"></img>
             }></ButtonBase>
-            <ProfileIcon></ProfileIcon>
+            <div id='MenuBtn'>
+                <ProfileIcon></ProfileIcon>
+            </div>
         </section>
     </div>
 })

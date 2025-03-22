@@ -5,7 +5,8 @@ a.badge{
     justify-content: flex-start;
     align-items: center;
     position: relative;
-    height: auto;
+    height: 70px;
+    transition: height var(--Animation-speed) ease-in-out;
     width: 100%;
     padding: 5px 0;
 
@@ -15,7 +16,7 @@ a.badge{
         width: 35px;
         transition: width var(--Animation-speed) ease-in-out;
         filter: drop-shadow(0px 0px 3px rgba(255, 255, 255, 0.589));
-        transition: filter var(--Animation-speed) ease-in-out;
+        transition: filter var(--Animation-speed) ease-in-out, width var(--Animation-speed) ease-in-out;
     }
     
     span{
@@ -28,10 +29,10 @@ a.badge{
         opacity: 0;
         overflow: hidden;
         height: 0px;
-        transition: height var(--Animation-speed) ease-in-out, opacity var(--Animation-speed) ease-in-out;
         display: flex;
         flex-direction: column;
         align-items: center;
+        transition: opacity var(--Animation-speed) ease-in-out;
 
         >.loadingBarWrapper{
             width: 90%;
@@ -53,9 +54,9 @@ a.badge{
 
     .shortVersion,.moneyHaving{
         padding-top: 2px;
-        height: auto;
+        opacity: 1;
         font-size: small;
-        transition: height var(--Animation-speed) ease-in-out, opacity var(--Animation-speed) ease-in-out;
+        transition: opacity var(--Animation-speed) ease-in-out;
         color: var(--Color-Primary-L1);
         filter: drop-shadow(0px 0px 4px var(--Color-Primary));
     }
@@ -66,7 +67,7 @@ a.badge{
         opacity: 0;
         height: 0px;
         text-align: center;
-        transition: height var(--Animation-speed) ease-in-out, opacity var(--Animation-speed) ease-in-out;
+        transition: opacity 0 ease-in-out;
     }
 
     .moneyObjetive{
@@ -76,8 +77,8 @@ a.badge{
 }
 
 
-.extended a.badge{
-
+.extended a.badge, #SidebarLeft:hover a.badge{
+    height: 130px;
     
     .badgeImage{
         width: 55px;
@@ -89,17 +90,20 @@ a.badge{
         height: auto;
         height: calc-size(auto);
         text-align: center;
+        transition: opacity var(--Animation-speed) ease-in-out;
     }
 
     .extendedVersion{
         opacity: 1;
-        height: auto;
-        height: calc-size(auto);
         overflow: visible;
+        height: auto;
+        display: flex;
+        transition: opacity var(--Animation-speed) ease-in-out;
     }
 
     .shortVersion{
         height: 0px;
+        opacity: 0;
         overflow: hidden;
     }
 }
