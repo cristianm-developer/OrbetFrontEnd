@@ -66,7 +66,7 @@ body{
 
 }
 
-@media screen and (width <= 420px)  {
+@media screen and (width <= 450px)  {
   
     .App >main{
       grid-column: 1 / 5 ;
@@ -169,7 +169,7 @@ html {
   
 }
 
-@media screen and (width <= 420px) {
+@media screen and (width <= 450px) {
   .App{
     grid-template-columns: 80px 1fr 0px 200px;
   }

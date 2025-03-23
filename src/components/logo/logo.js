@@ -7,6 +7,7 @@ const Logo = (() => {
             <h2 className="fontController">ORBET</h2>
             <div id="arrowWrapper">
                 <i className="orbeticon-arrowleft arrow"></i>
+                <i className="orbeticon-menu menu"></i>
             </div>
         </div>
 

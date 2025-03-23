@@ -53,7 +53,10 @@
             align-items: center;
             cursor: pointer;
             transition: width var(--Animation-speed) ease-in-out;
-    
+            background: linear-gradient(178deg,  rgba(255, 255, 255, 0.047) 0%, rgb(0, 0, 0, .3) 50%, rgba(255, 255, 255, 0.047) 100%);
+            filter: brightness(1);
+            transition: filter var(--Animation-speed) ease-in-out;
+
             .buttonBuyCrypto{
                 height: 100%;
                 display: flex !important;
@@ -69,9 +72,14 @@
                 }
             }
         }
+
+        .buttonElevated:hover{
+            filter: brightness(2.5);
+        }
     }
 
-}
+}        
+
 
 #SidebarLeft.extended, .App:has(#expandArrow:hover) #SidebarLeft, #SidebarLeft:hover{
     width: 210px;
@@ -100,7 +108,7 @@ br{
     width: 70%;
 }
 
-@media screen and (width <= 420px)  {
+@media screen and (width <= 450px)  {
     #SidebarLeft{
         height: 61px;
         position: absolute;

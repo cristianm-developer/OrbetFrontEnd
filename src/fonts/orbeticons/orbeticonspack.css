@@ -85,3 +85,4 @@
 .orbeticon-startsminimalistic:before { content: '\e81d'; } /* '' */
 .orbeticon-ticketsale:before { content: '\e81f'; } /* '' */
 .orbeticon-suspensivepoints:before { content: '\e81e'; scale: .4; margin: 0; translate: -50% 0; } /* '' */
+.orbeticon-menu:before { content: '\e815'; scale: .8; } /* '' */
