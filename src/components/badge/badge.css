@@ -62,6 +62,7 @@ a.badge{
     }
 
     .titleBadge{
+        font-size: .65rem;
         color: var(--Color-Primary);
         padding: 3px 0px;
         opacity: 0;
