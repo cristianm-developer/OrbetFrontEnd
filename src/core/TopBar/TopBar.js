@@ -46,6 +46,7 @@ const TopBar = (() => {
             </ButtonBase>
         </section>
         <section id="TopBarUser">
+            
             <ButtonBase content={
                 <div className='wrapperVerticalFlex buttonWithLoadingBar'>
                     <div className='wrapperFlex textoTop'>
@@ -72,9 +73,23 @@ const TopBar = (() => {
             }></ButtonBase>
             <div className="menuResponsiveWrapper">
                 <ButtonBase content={
+                    <div className='wrapperFlex walletResponsive'>
+                        <h3 className='fontController'>{new Intl.NumberFormat('en-Us', { style: 'currency', currency: 'USD' }).format(money)}</h3>
+                        <ButtonElevated content={
+                            <div className='wrapperFlex'>
+                                <i className='orbeticon-stars'></i>
+                                <span>Wallet</span>
+                            </div>
+                        }>
+                        </ButtonElevated>
+                    </div>
+                }>
+                </ButtonBase>
+                <ButtonBase content={
                     <i className='orbeticon-suspensivepoints '></i>
                 }></ButtonBase>
                 <div className="menuResponsive">
+                    <div className="spaceHover"></div>
                     <ButtonBase content={
                         <i className='orbeticon-moon'></i>
                     }></ButtonBase>
