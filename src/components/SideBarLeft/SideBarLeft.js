@@ -4,6 +4,7 @@ import Logo from "../elements/logo/logo";
 import Badge from "../elements/widgetsSidebar/badge/badge";
 import ProfileIcon from "../elements/widgetsSidebar/profileIcon/profileIcon";
 import ButtonSidebar from "../elements/buttonSidebar/buttonSidebar";
+import ButtonElevated from "../elements/buttonElevated/buttonElevated";
 import { useState } from "react";
 
 const SideBarLeft = (() => {
@@ -27,8 +28,31 @@ const SideBarLeft = (() => {
             </div>
             <br></br>
             <div id="buttons">
-                <ButtonSidebar></ButtonSidebar>
+                <ButtonSidebar  name='Home' route='/' iconClassname='orbeticon-home2' ></ButtonSidebar>
+                <ButtonSidebar  name='Missions' iconClassname='orbeticon-starangle' ></ButtonSidebar>
+                <ButtonSidebar  name='Rewards' iconClassname='orbeticon-cupstar' ></ButtonSidebar>
+                <ButtonSidebar  name='Promotions' iconClassname='orbeticon-verifiedcheck' ></ButtonSidebar>
+                <ButtonSidebar  name='Affiliate' iconClassname='orbeticon-ufo4' ></ButtonSidebar>
+                <ButtonSidebar  name='StarPass' iconClassname='orbeticon-tickestar' ></ButtonSidebar>
+                <ButtonSidebar  name='Favorites' iconClassname='orbeticon-startsminimalistic' ></ButtonSidebar>
+                <ButtonSidebar  name='Originals' iconClassname='orbeticon-blackhole2' ></ButtonSidebar>
+                <ButtonSidebar  name='Slots' iconClassname='orbeticon-dollarminimalistic' ></ButtonSidebar>
+                <ButtonSidebar  name='Live Casino' iconClassname='orbeticon-ticketsale' ></ButtonSidebar>
+                <ButtonSidebar  name='Blackjack' iconClassname='orbeticon-compasssquare' ></ButtonSidebar>
+                <ButtonSidebar  name='Roulette' iconClassname='orbeticon-wheel' ></ButtonSidebar>
+                <ButtonSidebar  name='Game Shows' iconClassname='orbeticon-handstars' ></ButtonSidebar>
+                <ButtonSidebar  name='Bacarat' iconClassname='orbeticon-copy' ></ButtonSidebar>
             </div>
+            <br></br>
+      
+            <div id="sidebatSpecialBtn">
+            <ButtonElevated content={<div className="buttonBuyCrypto">
+                <i className="orbeticon-bitcoin"></i>
+                <span className="nameBtn">Buy Crypto</span>
+            </div>}>
+            </ButtonElevated>
+            </div>
+        
         </div>
     </aside>
 });

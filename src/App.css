@@ -106,3 +106,27 @@ br{
 .primary-text{
   color: var(--Color-Primary);
 }
+
+
+::-webkit-scrollbar {
+  width: 2px; 
+  height: 2px; 
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--Color-Primary); 
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent; 
+  border-radius: 2px; 
+}
+
+::-webkit-scrollbar-horizontal {
+  height: 2px; 
+}
+
+html {
+  scrollbar-width: thin; 
+  scrollbar-color: var(--Color-Primary); 
+}

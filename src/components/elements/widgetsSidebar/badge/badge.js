@@ -1,21 +1,26 @@
 import "./badge.css";
 import LoadingBar from '../../loadingBar/loadingBar'
+import { useContext } from "react";
+import { ProjectContext } from "../../../../contexts/ProjectContext";
 
 const Badge = (() => {
+
+    let project = useContext(ProjectContext);
+
     return <a className="badge"> 
-        <img className="badgeImage" src="imgs/Shield.png"/>
-        <b className="titleBadge fontController">COMET RANK</b>    
+        <img className="badgeImage" style={{filter: `drop-shadow(0px 0px 15px ${project.glowColor ?? 'white'})`}} src={project.badgeImg}/>
+        <b className="titleBadge fontController">{project.name}</b>    
         <div className="extendedVersion">
             <div className="loadingBarWrapper">
-                <LoadingBar></LoadingBar>
+                <LoadingBar value={project.actualAmount} total={project.objetiveAmount}></LoadingBar>
             </div>
             <div className="moneyAmountWrapper">
-                <span className="moneyHaving">$10,876.90</span>
-                <span className="moneyObjetive">$50,000.00</span>
+                <span className="moneyHaving">{new Intl.NumberFormat('en-Us', {style: 'currency', currency:'USD'}).format(project.actualAmount)}</span>
+                <span className="moneyObjetive">{new Intl.NumberFormat('en-Us', {style: 'currency', currency:'USD'}).format(project.objetiveAmount)}</span>
             </div>
         </div>
         <div className="shortVersion">
-            <span>$10,876.90</span>
+            <span>{new Intl.NumberFormat('en-Us', {style: 'currency', currency:'USD'}).format(project.actualAmount)}</span>
         </div>
     </a>
 });

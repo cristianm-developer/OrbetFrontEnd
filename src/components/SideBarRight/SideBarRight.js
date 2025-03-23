@@ -15,13 +15,17 @@ const SideBarRight = (() =>
         </section>
         <br></br>
         <section className='flexExtend'>
-            <div className='wrapperFlex'>
-                <ButtonSidebar></ButtonSidebar>
-            </div>
+            <ButtonSidebar name='My Wallet' iconClassname='orbeticon-wallet'></ButtonSidebar>
+            <ButtonSidebar name='Vault' iconClassname='orbeticon-moneybag'></ButtonSidebar>
+            <ButtonSidebar name='Affiliate Program' iconClassname='orbeticon-handstars'></ButtonSidebar>
+            <ButtonSidebar name='Transactions' iconClassname='orbeticon-cardtransfer'></ButtonSidebar>
+            <ButtonSidebar name='Redeem Code' iconClassname='orbeticon-ticketsale'></ButtonSidebar>
+            <ButtonSidebar name='Settings' iconClassname='orbeticon-rocket'></ButtonSidebar>
+            <ButtonSidebar name='Live Support' iconClassname='orbeticon-headphonesroundsound'></ButtonSidebar>
         </section>
         <section>
             <div className='wrapperFlex logoutButton'>
-                <img className='icon' src='icons/gear.svg'></img>
+                <i className='orbeticon-poweron '></i>
                 <span>Logout</span>
             </div>
         </section>

@@ -4,6 +4,7 @@
     height: 100%;
     background-color: var( --Background-Color-D1);
     border-radius: 25px 0px 25px 25px;
+    height: 100%;
     gap: 10px;
     grid-row: span 2;
     width: 100%;
@@ -19,6 +20,7 @@
         align-items: center;
         gap: 10px;
         width: 100%;
+        overflow: hidden;
     }
 
     #LogoWrapper{
@@ -29,12 +31,60 @@
 
     #buttons{
         width: 100%;
-        height: auto;
+        display: flex;
+        flex: 1;
+        flex-direction: column;
+        overflow-y: auto;
+        overflow-x: hidden;
     }
+
+    #sidebatSpecialBtn{
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        padding: 0 12px 12px 18px;
+        .buttonElevated{
+            height: 35px;
+            width: 35px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            transition: width var(--Animation-speed) ease-in-out;
+    
+            .buttonBuyCrypto{
+                height: 100%;
+                display: flex;
+                align-items: center;
+        
+                .nameBtn{
+                    display: flex;
+                    height: 100%;
+                    align-items: center;
+                    overflow: hidden;
+                    text-wrap: nowrap;
+                    
+                    max-width: 0px;
+                }
+            }
+        }
+    }
+
 }
 
 #SidebarLeft.extended, .App:has(#expandArrow:hover) #SidebarLeft, #SidebarLeft:hover{
     width: 220px;
+
+    .buttonElevated{
+        width: 100%;
+        .nameBtn{
+            padding: 0 8px;
+            max-width: 100%;
+        }
+    }
+
+
 }
 
 #SidebarWidgets{

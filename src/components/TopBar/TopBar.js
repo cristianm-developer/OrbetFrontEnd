@@ -3,20 +3,29 @@ import ButtonBase from "../elements/buttonBase/buttonBase";
 import ButtonElevated from '../elements/buttonElevated/buttonElevated';
 import LoadingBar from '../elements/loadingBar/loadingBar';
 import ProfileIcon from '../elements/widgetsSidebar/profileIcon/profileIcon'
+import { useContext } from 'react';
+import { UserContext } from '../../contexts/UserContext';
+import { ProjectContext } from '../../contexts/ProjectContext';
 
 
 const TopBar = (() => {
+
+    let {money} = useContext(UserContext);
+    let {starPassProgress} = useContext(ProjectContext);
+
     return <div id="TopBar">
         <section id="TopBarSearch">
             <ButtonBase content={
-                <img className='icon' src="icons/gear.svg"></img>
+                <i className='orbeticon-moon'></i>
             }></ButtonBase>
             <ButtonBase content={
-                <img className='icon' src="icons/gear.svg"></img>
+                <i className='orbeticon-wave'></i>
             }></ButtonBase>
+
             <ButtonBase  content={
                 <div className='wrapperFlex inputSearch'>
-                    <img className='icon' src="icons/gear.svg"></img>
+                    <i className='orbeticon-search'></i>
+                    
                     <input type="text" placeholder='Search...'></input>
                 </div>
             }></ButtonBase>
@@ -24,10 +33,10 @@ const TopBar = (() => {
         <section id="TopBarWallet">
             <ButtonBase content={
                 <div className='wrapperFlex'>
-                    <h3 className='fontController'>$3,547.002</h3>
+                    <h3 className='fontController'>{new Intl.NumberFormat('en-Us', {style: 'currency', currency:'USD'}).format(money)}</h3>
                     <ButtonElevated content={
                         <div className='wrapperFlex'>
-                            <img className='icon' src='icons/gear.svg'></img>
+                            <i className='orbeticon-stars'></i>
                             <span>Wallet</span>
                         </div>
                     }>
@@ -41,23 +50,23 @@ const TopBar = (() => {
                     <div className='wrapperVerticalFlex buttonWithLoadingBar'>
                         <div className='wrapperFlex textoTop'>
                             <span>Star Pass</span>
-                            <span className='primary-text'>63%</span>
+                            <span className='primary-text'>{starPassProgress}%</span>
                         </div>       
-                        <LoadingBar></LoadingBar>
+                        <LoadingBar value='63' total='100' ></LoadingBar>
                     </div>
                 }></ButtonBase>
             <ButtonBase content={
-                <img className='icon' src="icons/gear.svg"></img>
+                <i className='orbeticon-bell'></i>
             }></ButtonBase>
             <ButtonBase content={
                 <div className='wrapperFlex rewardBtn'>
-                    <img className='icon' src="icons/gear.svg"></img>
+                    <img className='icon' src="icons/RewardBox.png"></img>
                     <span>Reward</span>
-                    <img className='icon' src="icons/gear.svg"></img>
+                    <i className='orbeticon-arrowdown1'></i>
                 </div>
             }></ButtonBase>
             <ButtonBase content={
-                <img className='icon' src="icons/gear.svg"></img>
+                <i className='orbeticon-dialog'></i>
             }></ButtonBase>
             <div id='MenuBtn'>
                 <ProfileIcon></ProfileIcon>

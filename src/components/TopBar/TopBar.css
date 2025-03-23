@@ -17,7 +17,12 @@
 
     .rewardBtn{
         gap: 6px;
-        padding: 0 6px;
+        padding: 0 8px;
+
+        .icon{
+            width: 30px;
+            height: 30px;
+        }
     }
 
 
@@ -30,6 +35,14 @@
 #TopBarWallet{
     display: flex;
     position: relative;
+
+    .buttonBase{
+        cursor: unset;
+    }
+
+    .buttonElevated{
+        cursor: pointer;
+    }
 
     h3{
         display: flex;
@@ -89,7 +102,8 @@
     cursor: pointer;
     filter: brightness(1);
     transition: filter var(--Animation-speed) ease-in-out;
-
+    height: 30px;
+    padding: 0 12px;
 }
 
 .buttonElevated:hover{

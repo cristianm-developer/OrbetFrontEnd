@@ -11,6 +11,8 @@
     filter: drop-shadow(-1px 0px 1px var(--Color-Primary-Fade));
     z-index: 5;
     transition: opacity var(--Animation-speed) ease-in-out;
+    max-height: 100%;
+    overflow: hidden;
 
     section{
         padding: 12px;
@@ -30,10 +32,11 @@
         filter: brightness(1);
         cursor: pointer;
         transition: filter var(--Animation-speed) ease-in-out;
+        color: var(--Color-Primary);
     }
 
     .logoutButton:hover{
-        filter: brightness(1.6);
+        filter: brightness(1.9);
     }
 }
 

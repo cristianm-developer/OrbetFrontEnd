@@ -1,10 +1,13 @@
 import "./logo.css"
 
-const Logo = (({onToggle}) => {
+const Logo = (() => {
+
     return <div id="Logo">
             <img id="LogoImg" src="logo.png"/>
             <h2 className="fontController">ORBET</h2>
-            <i id="expandArrow" onClick={onToggle} ><img id="arrowIcon" src="icons/arrow.svg"></img></i>
+            <div id="arrowWrapper">
+                <i className="orbeticon-arrowleft arrow"></i>
+            </div>
         </div>
 
 } );

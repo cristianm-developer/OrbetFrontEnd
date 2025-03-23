@@ -1,16 +1,21 @@
+import { useContext } from 'react';
 import './profileIcon.css';
+import { UserContext } from '../../../../contexts/UserContext';
 
-const ProfileIcon = (({isOpen}) => {
-    return <a className={`profileIcon ${isOpen? 'openObj' : ''}`}> 
+
+const ProfileIcon = (() => {
+    const infoUsuario = useContext(UserContext)
+
+    return <a className='profileIcon'> 
         <div className='wrapperProfileIcon'>
-            <img className='profilePhoto' src="/imgs/StrongMan.png"/>
+            <img className='profilePhoto' src={infoUsuario.profileImg}/>
             <div className='wrapperFlex subText'>
-                <img src='/icons/gear.svg' className='icon-small'></img>
+                <i className='orbeticon-crownminimalistic'></i>
                 <span>VIP</span>
             </div>
             <div className='bg'></div>
         </div>
-        <span className='nome'>MDXAGENCY98</span> 
+        <span className='nome'>{infoUsuario.name}</span> 
     </a>
 });
 
