@@ -208,8 +208,17 @@
     
 }
 
-@media screen and (width <= 500px) {
+@media screen and (width <= 600px) {
     .menuResponsiveWrapper .buttonBase:has(.walletResponsive){
         display: none;
     }
+}
+
+.buttonBase:has(.animationButton:not(.AnimationsActived)){
+    filter: drop-shadow(1px -1px 1px var(--Color-Primary-Fade));
+}
+
+.buttonBase:has(.animationButton.AnimationsActived){
+    filter: drop-shadow(0px 0px 5px var(--Color-Primary-D0));
+    background: linear-gradient(193deg, rgba(107,107,107,.1) 0%, rgba(0,0,0,.3) 50%, rgba(255,255,255,.12) 100%);
 }

@@ -13,6 +13,18 @@ const TopBar = (() => {
     let { money } = useContext(UserContext);
     let { starPassProgress } = useContext(ProjectContext);
 
+    const toggleAnimations = () => {
+        const el = document.querySelector('#TopBar .animationButton'); 
+        if(document.body.classList.contains('noAnimations')){
+            document.body.classList.remove('noAnimations');
+            el.classList.add('AnimationsActived')
+        }
+        else{
+            document.body.classList.add('noAnimations');
+            el.classList.remove('AnimationsActived')
+        }
+    }
+
     return <div id="TopBar">
         <section id="TopBarSearch">
             <ButtonBase content={
@@ -85,6 +97,11 @@ const TopBar = (() => {
                     </div>
                 }>
                 </ButtonBase>
+                <div onClick={toggleAnimations}>
+                    <ButtonBase content={
+                            <i className='orbeticon-animation animationButton AnimationsActived'></i>
+                        }></ButtonBase>
+                    </div>
                 <div className="responsiveMenuButton">
               
                     <ButtonBase content={
