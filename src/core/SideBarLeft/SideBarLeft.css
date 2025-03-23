@@ -81,7 +81,7 @@
 }        
 
 
-#SidebarLeft.extended, .App:has(#SidebarLeft:hover) #SidebarLeft{
+#SidebarLeft.extended, #SidebarLeft:not(.hidding):hover{
     width: 210px;
 
     .buttonElevated{

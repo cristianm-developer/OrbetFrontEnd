@@ -58,8 +58,14 @@
     filter: drop-shadow(0px 0px 8px white);
 }
 
-.arrow{
+.arrow:not(.arrowInverted){
     transform: rotate(180deg);
+    position: absolute;
+    bottom: 40%;
+}
+
+.arrowInverted{
+    display: none;
     position: absolute;
     bottom: 40%;
 }
@@ -70,4 +76,15 @@
         max-width: 200px;
     }
 
+    .arrow{
+        display: none;
+    }
+
+    .arrowInverted{
+        display: block;
+
+ 
+    }
 }
+
+

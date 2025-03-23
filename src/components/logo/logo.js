@@ -16,6 +16,7 @@ const Logo = (() => {
             <h2 className="fontController">ORBET</h2>
             <div id="arrowWrapper">
                 <i className="orbeticon-arrowleft arrow"></i>
+                <i className="orbeticon-arrowleft arrow arrowInverted" onClick={blurSidebar}></i>
             </div>
         </div>
 
