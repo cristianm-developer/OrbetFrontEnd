@@ -1,18 +1,18 @@
 import "./logo.css"
 
-const Logo = (() => {
+const Logo = (({sidebarExtended}) => {
 
     const toggleSidebar = () => {
-        const elArrowInverted = document.querySelector('#arrowWrapper .arrowInverted');
-
-        if(window.innerWidth < 650 || !elArrowInverted)
-            return;
-
         const el = document.querySelector('#SidebarLeft');
-        el.classList.add('hidding');
-        setTimeout(() => {
-            el.classList.remove('hidding');
-        }, 210);
+        if(el.classList.contains('extended')){
+            el.classList.add('hidding')
+            el.classList.remove('extended');
+            setTimeout(() => {
+                el.classList.remove('hidding');
+            }, 220);
+        }
+        else
+            el.classList.add('extended')
     }
 
     return <div id="Logo">
@@ -20,7 +20,7 @@ const Logo = (() => {
             <h2 className="fontController">ORBET</h2>
             <div id="arrowWrapper" onClick={toggleSidebar}>
                 <i className="orbeticon-arrowleft arrow"></i>
-                <i className="orbeticon-arrowleft arrow arrowInverted"></i>
+                <i className="orbeticon-arrowleft arrow arrowInverted" ></i>
             </div>
         </div>
 

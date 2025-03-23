@@ -147,14 +147,14 @@ html {
   scrollbar-color: var(--Color-Primary);
 }
 
-@media screen and (width <=600px) {
+@media screen and (width <=650px) {
   .hide-sm {
     display: none;
   }
 
 }
 
-@media screen and (width > 600px) and (width <=1200px) {
+@media screen and (width > 650px) and (width <=1200px) {
   .hide-md {
     display: none;
   }

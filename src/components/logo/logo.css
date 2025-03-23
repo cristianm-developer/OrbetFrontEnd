@@ -59,11 +59,7 @@
     transition: filter var(--Animation-speed) ease-in-out; 
 }
 
-@media screen and (width <650px) {
-    .arrow:not(.arrowInverted) {
-        bottom: 20px !important;
-    }
-}
+
 .arrow:hover{
     filter: drop-shadow(0px 0px 8px white);
 }
@@ -76,38 +72,42 @@
 
 .arrowInverted{
     display: none;
+    opacity: 0;
     position: absolute;   
 }
 
-.extended #Logo, #SidebarLeft:hover #Logo{
+.extended #Logo{
 
     h2{
         max-width: 200px;
     }
 
-    @media screen and (width < 650px) {
-        #arrowWrapper{
-            pointer-events: none;
-        }
-    }
-
     #arrowWrapper{
-
         .arrow{
             display: none;
         }
     
         .arrowInverted{
             display: block;
-    
-     
+            opacity: 1;   
         }
     }
 }
 
+
 @media screen and (width <= 650px)  {
-    *:not(.extended) #Logo, #SidebarLeft:not(:hover) #Logo #arrowWrapper{
+    
+    #SidebarLeft:not(.extended) #Logo #arrowWrapper{
         clip-path: none;
         height: 66px;
     }
-  }
+
+    .arrow{
+        position: absolute;
+        top: 45px ;
+    }
+
+    .arrowInverted{
+        top: 25px;
+    }
+}

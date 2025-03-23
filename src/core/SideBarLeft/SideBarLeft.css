@@ -86,7 +86,7 @@
 }        
 
 
-#SidebarLeft.extended, #SidebarLeft:not(.hidding):hover{
+#SidebarLeft.extended:not(.hidding){
     width: 210px;
 
     #sidebarSpecialBtn{
@@ -120,7 +120,7 @@
         border-radius: 25px 0 0 25px;
     }
 
-    #SidebarLeft:hover{
+    #SidebarLeft.extended{
         height: 95dvh;
         width: 87dvw;
         

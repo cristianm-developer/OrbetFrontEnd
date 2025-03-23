@@ -7,7 +7,26 @@ import ButtonSidebar from "../../components/buttonSidebar/buttonSidebar";
 import ButtonElevated from "../../components/buttonElevated/buttonElevated";
 
 const SideBarLeft = (() => {
-    return <aside id="SidebarLeft" className={`shadownTopRight`}>
+
+    const extendSidebar = () => {
+        if(window.innerWidth < 650)
+            return
+        
+        const el = document.querySelector('#SidebarLeft');
+        if(!el.classList.contains('extended'))
+            el.classList.add('extended')
+    }
+
+    const shrinkSidebar = () => {
+        if(window.innerWidth < 650)
+            return
+        
+        const el = document.querySelector('#SidebarLeft');
+        if(el.classList.contains('extended'))
+            el.classList.remove('extended')
+    }
+
+    return <aside id="SidebarLeft" className={`shadownTopRight`} onMouseEnter={extendSidebar} onMouseLeave={shrinkSidebar}>
         
         <Logo></Logo>
         
