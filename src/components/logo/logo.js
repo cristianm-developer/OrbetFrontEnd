@@ -3,6 +3,9 @@ import "./logo.css"
 const Logo = (() => {
 
     const toggleSidebar = () => {
+        if(window.innerWidth < 650)
+            return;
+
         const el = document.querySelector('#SidebarLeft');
         el.classList.add('hidding');
         setTimeout(() => {
