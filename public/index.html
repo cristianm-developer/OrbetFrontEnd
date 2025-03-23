@@ -1,103 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link href="https://db.onlinewebfonts.com/c/99d5563c5700c5c4e3fa6c9f60f31ba5?family=Controller+W01+One" rel="stylesheet">
-    <meta name="theme-color" content="#000000" />
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<head>
+  <meta charset="utf-8" />
+  <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link href="https://db.onlinewebfonts.com/c/99d5563c5700c5c4e3fa6c9f60f31ba5?family=Controller+W01+One"
+    rel="stylesheet">
+  <meta name="theme-color" content="#000000" />
+  <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
 
-    <title>Orbet</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
 
-    <style>
+  <title>Orbet</title>
 
-      body{
-        margin: 0;
-      }
-      
-      img#LogoImg {
+  <style>
+    body {
+      margin: 0;
+    }
+
+    img#LogoImg {
+      width: 50px;
+    }
+
+    #LoadingScreen {
+      pointer-events: none;
+      opacity: 0;
+      transition: opacity .2s ease-in-out;
+      position: fixed;
+      color: white;
+      background-color: rgba(0, 0, 0, 0.938);
+      height: 100dvh;
+      width: 100dvw;
+      z-index: 20;
+      justify-content: center;
+      align-items: center;
+      font-family: "Controller W01 One";
+      letter-spacing: 2px;
+      display: flex;
+    }
+
+    body.Loading #LoadingScreen {
+      opacity: 1;
+
+    }
+
+    body.Loading #LoadingWrapper {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+      position: relative;
+
+      img {
         width: 50px;
       }
 
-      #LoadingScreen{
-        pointer-events: none;
+    }
+
+    body.Loading #LoadingWrapper::after {
+      content: '';
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background-color: rgba(255, 255, 255, 1);
+      border-radius: 50%;
+
+      filter: blur(30px) drop-shadow(0px 0px 5px white) drop-shadow(0px 0px 5px white);
+      animation: LoadingAnimation 1s infinite ease-in-out;
+    }
+
+
+    @keyframes LoadingAnimation {
+      0% {
+        scale: 0;
         opacity: 0;
-        transition: opacity .2s ease-in-out;
-        position: fixed;
-        color: white;
-        background-color: rgba(0, 0, 0, 0.938);
-        height: 100dvh;
-        width: 100dvw;
-        z-index: 20;
-        justify-content: center;
-        align-items: center;
-        font-family: "Controller W01 One";
-        letter-spacing: 2px;
+        left: -20%;
       }
 
-      body.Loading #LoadingScreen {
+      50% {
+        scale: 1;
         opacity: 1;
-        display: flex;
-
-        #LoadingWrapper{
-          display: flex;
-          gap: 12px;
-          align-items: center;
-          position: relative;
-
-          img {
-            width: 50px;
-          }
-        
-        }
-
-        #LoadingWrapper::after{
-          content: '';
-          position: absolute;
-          width: 20px;
-          height: 20px;
-          background-color: rgba(255, 255, 255, 1);
-          border-radius: 50%;
-        
-          filter:blur(30px) drop-shadow(0px 0px 5px white) drop-shadow(0px 0px 5px white); 
-          animation: LoadingAnimation 1s infinite ease-in-out;
-        }
-
       }
 
-      @keyframes LoadingAnimation {
-        0%{
-          scale: 0;
-          opacity: 0;
-          left: -20%;
-        }
-
-        50%{
-          scale: 1;
-          opacity: 1;
-        }
-
-        100% {
-          scale: 0;
-          left: 120%;
-          opacity: 0;
-        }
+      100% {
+        scale: 0;
+        left: 120%;
+        opacity: 0;
       }
-    </style>
-  </head>
-  <body class="Loading">
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="LoadingScreen">
-      <div id="LoadingWrapper">
-        <img id="LogoImg" src="logo.png"/>
-        <h2 className="fontController">ORBET</h2>
-      </div>
+    }
+  </style>
+</head>
+
+<body class="Loading">
+  <noscript>You need to enable JavaScript to run this app.</noscript>
+  <div id="LoadingScreen">
+    <div id="LoadingWrapper">
+      <img id="LogoImg" src="logo.png" />
+      <h2 className="fontController">ORBET</h2>
     </div>
-    <div id="root"></div>
-  </body>
+  </div>
+  <div id="root"></div>
+</body>
+
 </html>
