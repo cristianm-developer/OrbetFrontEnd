@@ -7,6 +7,7 @@ const Logo = (() => {
 
         if(el && !el.classList.contains('hidding')){
             el.classList.add('hidding');
+            el.style.pointerEvents = 'none';
             setTimeout(() => {  el.classList.remove('hidding') }, 210);
         }
     }

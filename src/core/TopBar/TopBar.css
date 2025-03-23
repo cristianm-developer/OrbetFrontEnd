@@ -202,7 +202,7 @@
     
 }
 
-@media screen and (width <= 450px) {
+@media screen and (width <= 500px) {
     .menuResponsiveWrapper .buttonBase:has(.walletResponsive){
         display: none;
     }
