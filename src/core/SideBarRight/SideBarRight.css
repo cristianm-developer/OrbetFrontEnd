@@ -52,3 +52,12 @@
     opacity: 1;
     pointer-events: all;
 }
+
+@media screen and (width <= 420px) {
+    #SideBarRight{
+        position: absolute;
+        right: 0;
+        width: 88dvw;
+        z-index: 12;
+    }
+  }

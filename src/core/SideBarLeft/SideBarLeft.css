@@ -99,3 +99,18 @@
 br{
     width: 70%;
 }
+
+@media screen and (width <= 420px)  {
+    #SidebarLeft{
+        height: 61px;
+        position: absolute;
+        z-index: 12;
+        border-radius: 25px 0 0 25px;
+    }
+
+    #SidebarLeft:hover{
+        height: 95dvh;
+        width: 87dvw;
+        
+    }
+  }

@@ -54,8 +54,6 @@ body{
   overflow: hidden;
   position: relative;
 
-
-
   >main{
     z-index: 1;
     display: flex;
@@ -65,7 +63,17 @@ body{
     width: 100%;
     height: 100%;
   }
+
 }
+
+@media screen and (width <= 420px)  {
+  
+    .App >main{
+      grid-column: 1 / 5 ;
+    }
+  }
+
+
 
 @media screen and (width <= 1200px) {
   .App{
@@ -159,4 +167,10 @@ html {
     display: none;
   }
   
+}
+
+@media screen and (width <= 420px) {
+  .App{
+    grid-template-columns: 80px 1fr 0px 200px;
+  }
 }

@@ -81,3 +81,15 @@
     }
 
 }
+
+
+@media screen and (width <= 420px)  {
+    #SidebarLeft #Logo #arrowWrapper{
+        height: 60px ;
+    }
+
+    #SidebarLeft:hover #Logo #arrowWrapper{
+        clip-path: path('m0 82.944c0-4.608 0-9.216 4.608-13.824l13.824-9.216s9.216-4.608 9.216-13.824v-36.864c0-9.216-4.608-9.216-9.216-9.216h-18.432z');
+     }
+
+  }

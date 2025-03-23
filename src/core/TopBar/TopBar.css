@@ -201,3 +201,9 @@
     height: 8px;
 
 }
+
+@media screen and (width <= 420px) {
+    .menuResponsiveWrapper .buttonBase:has(.walletResponsive){
+        display: none;
+    }
+}
