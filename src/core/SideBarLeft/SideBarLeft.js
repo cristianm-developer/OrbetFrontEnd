@@ -5,19 +5,11 @@ import Badge from "../../components/badge/badge";
 import ProfileIcon from "../../components/profileIcon/profileIcon";
 import ButtonSidebar from "../../components/buttonSidebar/buttonSidebar";
 import ButtonElevated from "../../components/buttonElevated/buttonElevated";
-import { useState } from "react";
 
 const SideBarLeft = (() => {
-    const [isOpen, setIsOpen] = useState(false);
-
-    const toggleSidebar = () => {
-        console.log('click')
-        setIsOpen(!isOpen);
-    }
-
-    return <aside id="SidebarLeft" className={`shadownTopRight ${isOpen? 'extended' : ''}`}>
+    return <aside id="SidebarLeft" className={`shadownTopRight`}>
         
-        <Logo onToggle={toggleSidebar}></Logo>
+        <Logo></Logo>
         
         <div id="SidebarLeftBody">
             <br></br>
@@ -46,11 +38,11 @@ const SideBarLeft = (() => {
             <br></br>
       
             <div id="sidebarSpecialBtn">
-            <ButtonElevated content={<div className="buttonBuyCrypto">
-                <i className="orbeticon-bitcoin"></i>
-                <span className="nameBtn">Buy Crypto</span>
-            </div>}>
-            </ButtonElevated>
+                <ButtonElevated content={<div className="buttonBuyCrypto">
+                    <i className="orbeticon-bitcoin"></i>
+                    <span className="nameBtn">Buy Crypto</span>
+                </div>}>
+                </ButtonElevated>
             </div>
         
         </div>

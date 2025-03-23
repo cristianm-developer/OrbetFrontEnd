@@ -60,12 +60,12 @@ const HomeView = (() => <div id="HomeView">
                 maintainable, scalable styling solutions.
             </p>
         </div>
-    </section>
 
-    <p>
-        This structured and efficient development approach ensures the creation of high-quality, maintainable, 
-        and scalable applications that adhere to modern web standards.
-    </p>
+        <p>
+            This structured and efficient development approach ensures the creation of high-quality, maintainable, 
+            and scalable applications that adhere to modern web standards.
+        </p>
+    </section>
 </div>)
 
 export default HomeView;
