@@ -85,31 +85,35 @@ const TopBar = (() => {
                     </div>
                 }>
                 </ButtonBase>
-                <ButtonBase content={
-                    <i className='orbeticon-suspensivepoints '></i>
-                }></ButtonBase>
-                <div className="menuResponsive">
-                    <div className="spaceHover"></div>
+                <div className="responsiveMenuButton">
+              
                     <ButtonBase content={
-                        <i className='orbeticon-moon'></i>
+                        <i className='orbeticon-suspensivepoints menuButton'></i>
                     }></ButtonBase>
-                    <ButtonBase content={
-                        <i className='orbeticon-wave'></i>
-                    }></ButtonBase>
-                    <ButtonBase content={
-                        <i className="orbeticon-tickestar"></i>
-                    }></ButtonBase>
-                    <ButtonBase content={
-                        <i className='orbeticon-bell'></i>
-                    }></ButtonBase>
-                    <ButtonBase content={
-                        <div className='wrapperFlex rewardBtn'>
-                            <img className='icon' src="icons/RewardBox.png"></img>
-                        </div>
-                    }></ButtonBase>
-                    <ButtonBase content={
-                        <i className='orbeticon-dialog'></i>
-                    }></ButtonBase>
+         
+                    <div className="menuResponsive">
+                        <div className="spaceHover"></div>
+                        <ButtonBase content={
+                            <i className='orbeticon-moon'></i>
+                        }></ButtonBase>
+                        <ButtonBase content={
+                            <i className='orbeticon-wave'></i>
+                        }></ButtonBase>
+                        <ButtonBase content={
+                            <i className="orbeticon-tickestar"></i>
+                        }></ButtonBase>
+                        <ButtonBase content={
+                            <i className='orbeticon-bell'></i>
+                        }></ButtonBase>
+                        <ButtonBase content={
+                            <div className='wrapperFlex rewardBtn'>
+                                <img className='icon' src="icons/RewardBox.png"></img>
+                            </div>
+                        }></ButtonBase>
+                        <ButtonBase content={
+                            <i className='orbeticon-dialog'></i>
+                        }></ButtonBase>
+                    </div>
                 </div>
             </div>
             <div id='MenuBtn'>

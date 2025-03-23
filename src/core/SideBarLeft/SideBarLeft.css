@@ -11,7 +11,7 @@
     max-width: 98dvw;
     max-height: 95dvh;
     transition: width var(--Animation-speed) ease-in-out;
-    z-index: 6;
+    z-index: 15;
     
     filter: drop-shadow(1px -1px 0px var(--Color-Primary-Fade));
 
@@ -84,12 +84,14 @@
 #SidebarLeft.extended, #SidebarLeft:not(.hidding):hover{
     width: 210px;
 
-    .buttonElevated{
-        width: 100%;
-        .nameBtn{
-            height: unset;
-            padding: 0 8px;
-            max-width: 100%;
+    #sidebarSpecialBtn{
+        .buttonElevated{
+            width: 100%;
+            .nameBtn{
+                height: unset;
+                padding: 0 8px;
+                max-width: 100%;
+            }
         }
     }
 

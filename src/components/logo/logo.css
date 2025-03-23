@@ -76,14 +76,18 @@
         max-width: 200px;
     }
 
-    .arrow{
-        display: none;
-    }
+    #arrowWrapper{
+        pointer-events: none;
 
-    .arrowInverted{
-        display: block;
-
- 
+        .arrow{
+            display: none;
+        }
+    
+        .arrowInverted{
+            display: block;
+    
+     
+        }
     }
 }
 

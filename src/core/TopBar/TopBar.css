@@ -90,8 +90,10 @@
     .menuResponsiveWrapper {
         display: none;
         position: relative;
+        z-index: 10;
 
         .menuResponsive {
+            z-index: 15;
             display: flex;
             opacity: 0;
             pointer-events: none;
@@ -117,10 +119,11 @@
         }
     }
 
-    .menuResponsiveWrapper:hover .menuResponsive, .menuResponsive:hover{
+    .responsiveMenuButton:hover .menuResponsive, .menuResponsive:hover {
+
         z-index: 12;
         opacity: 1;
-        pointer-events: all;
+        
     }
 
     @media screen and (width < 1200px) {
@@ -169,6 +172,10 @@
 @media screen and (width < 1200px) {
     #TopBar{
         justify-content: flex-end;
+
+        #TopBarUser .menuResponsiveWrapper{
+            translate: 0 10px;
+        }
     }
 }
 
