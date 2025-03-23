@@ -17,4 +17,24 @@
     p{
         color: rgb(223, 223, 223);
     }
+
+    .title{
+        display: flex;
+        color: white;
+        align-items: center;
+        gap: 10px;
+    }
+
+    a{
+        color: white;
+        display: flex;
+        gap: 10px;
+        filter: drop-shadow(0px 0px 0px var(--Color-Primary));;
+        transition: color var(--Animation-speed) ease-in-out, filter var(--Animation-speed) ease-in-out;
+    }
+
+    a:hover{
+        filter: drop-shadow(0px 0px 3px var(--Color-Primary));
+        color: var(--Color-Primary);
+    }
 }

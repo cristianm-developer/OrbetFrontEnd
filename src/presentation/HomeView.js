@@ -1,7 +1,12 @@
 import './HomeView.css';
 
 const HomeView = (() => <div id="HomeView">
-    <h2>Key Features of the Development Approach</h2>
+    <div className='title'>
+        <h2>Key Features of the Development Approach</h2>
+        <a href='https://github.com/cristianm-developer/OrbetFrontEnd'>
+            <i className='orbeticon-github'></i>Github
+        </a>
+    </div>
     <section>
 
         <div>
@@ -81,6 +86,7 @@ const HomeView = (() => <div id="HomeView">
             This structured and efficient development approach ensures the creation of high-quality, maintainable, 
             and scalable applications that adhere to modern web standards.
         </p>
+       
     </section>
 </div>)
 
