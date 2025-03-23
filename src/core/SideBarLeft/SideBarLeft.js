@@ -45,7 +45,7 @@ const SideBarLeft = (() => {
             </div>
             <br></br>
       
-            <div id="sidebatSpecialBtn">
+            <div id="sidebarSpecialBtn">
             <ButtonElevated content={<div className="buttonBuyCrypto">
                 <i className="orbeticon-bitcoin"></i>
                 <span className="nameBtn">Buy Crypto</span>

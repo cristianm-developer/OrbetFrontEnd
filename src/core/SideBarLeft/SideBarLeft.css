@@ -39,7 +39,7 @@
         overflow-x: hidden;
     }
 
-    #sidebatSpecialBtn{
+    #sidebarSpecialBtn{
         width: 100%;
         display: flex;
         justify-content: flex-start;
@@ -56,12 +56,11 @@
     
             .buttonBuyCrypto{
                 height: 100%;
-                display: flex;
+                display: flex !important;
                 align-items: center;
         
                 .nameBtn{
                     display: flex;
-                    height: 100%;
                     align-items: center;
                     overflow: hidden;
                     text-wrap: nowrap;
@@ -80,6 +79,7 @@
     .buttonElevated{
         width: 100%;
         .nameBtn{
+            height: unset;
             padding: 0 8px;
             max-width: 100%;
         }
