@@ -107,7 +107,7 @@
     }
 }
 
-@media screen and (width <= 450px)  {
+@media screen and (width <= 650px)  {
     *:not(.extended) #Logo, #SidebarLeft:not(:hover) #Logo #arrowWrapper{
         clip-path: none;
         height: 66px;

@@ -174,3 +174,7 @@ html {
   }
 }
 
+body.noAnimations *{
+  transition: none !important;
+}
+

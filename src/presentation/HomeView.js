@@ -61,6 +61,22 @@ const HomeView = (() => <div id="HomeView">
             </p>
         </div>
 
+        <div>
+            <h3>Loading Page for Improved User Experience</h3>
+            <p>
+                A loading page is implemented to improve the user experience during page load, ensuring a smooth and seamless 
+                interaction with the application while content is being loaded.
+            </p>
+        </div>
+
+        <div>
+            <h3>No Animation Option for Enhanced Performance</h3>
+            <p>
+                The application provides a "noAnimation" option, allowing users to disable animations for better performance, 
+                especially on lower-end devices or during performance-critical tasks.
+            </p>
+        </div>
+        
         <p>
             This structured and efficient development approach ensures the creation of high-quality, maintainable, 
             and scalable applications that adhere to modern web standards.
