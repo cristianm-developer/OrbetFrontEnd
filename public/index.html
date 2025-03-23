@@ -26,7 +26,7 @@
       width: 50px;
     }
 
-    #LoadingScreen {
+    body #LoadingScreen {
       pointer-events: none;
       opacity: 0;
       transition: opacity .2s ease-in-out;
@@ -43,8 +43,7 @@
       display: flex;
     }
 
-    body.Loading #LoadingWrapper {
-      opacity: 1;
+    body #LoadingWrapper{
       display: flex;
       gap: 12px;
       align-items: center;
@@ -53,7 +52,14 @@
       img {
         width: 50px;
       }
+    }
 
+    body.Loading #LoadingScreen{
+      opacity: 1;
+    }
+
+    body.Loading #LoadingWrapper {    
+      opacity: 1;
     }
 
     @keyframes LoadingAnimation {
@@ -75,15 +81,18 @@
       }
     }
 
-    body.Loading #LoadingWrapper::after {
+    #LoadingWrapper::after{
+      left: -20%;
       content: '';
       position: absolute;
       width: 20px;
       height: 20px;
       background-color: rgba(255, 255, 255, 1);
       border-radius: 50%;
-
       filter: blur(30px) drop-shadow(0px 0px 5px white) drop-shadow(0px 0px 5px white);
+    }
+
+    body.Loading #LoadingWrapper::after {
       animation: LoadingAnimation 1s infinite ease-in-out;
     }
 
