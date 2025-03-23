@@ -8,13 +8,21 @@ import { UserProvider } from './domains/auth/UserContext';
 import { ProjectProvider } from './domains/project/ProjectContext';
 import { BrowserRouter } from 'react-router-dom';
 import RouterView from './routes';
+import { useEffect } from 'react';
 
 function App() {
+
+  useEffect(() => {
+    setTimeout(() => {
+      document.body.classList.remove('Loading')
+    }, 1000);
+  }, [])
 
   return (
     <BrowserRouter>
       <UserProvider>
         <ProjectProvider>
+          
         <div className="App">
           <SideBarLeft></SideBarLeft>
           <TopBar></TopBar>

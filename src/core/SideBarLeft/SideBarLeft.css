@@ -78,6 +78,11 @@
         }
     }
 
+    br{
+        width: 70%;
+    }
+    
+
 }        
 
 
@@ -106,9 +111,6 @@
     padding: 12px 0px;
 }
 
-br{
-    width: 70%;
-}
 
 @media screen and (width <= 450px)  {
     #SidebarLeft{

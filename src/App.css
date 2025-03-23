@@ -1,5 +1,4 @@
-
-*{
+* {
   margin: 0px;
   padding: 0px;
   box-sizing: border-box !important;
@@ -9,16 +8,16 @@
   background: transparent;
 }
 
-body{
+body {
   box-sizing: content-box;
   overflow: hidden;
   width: 100dvw;
   height: 100dvh;
 }
 
-#root{
+#root {
   --Background-Color: #090909;
-  --Background-Color-D1:hsl(0, 0%, 3%); 
+  --Background-Color-D1: hsl(0, 0%, 3%);
   --Color-Primary: #09efff;
   --Color-Primary-D0: #288086;
   --Color-Primary-D1: #184247;
@@ -36,14 +35,14 @@ body{
   overflow: hidden;
   color: rgb(245, 242, 242);
 
-  *{
+  * {
     box-sizing: content-box;
   }
 }
 
 
 
-.App{
+.App {
   width: 100%;
   height: 100%;
   display: grid;
@@ -54,11 +53,11 @@ body{
   overflow: hidden;
   position: relative;
 
-  >main{
+  >main {
     z-index: 1;
     display: flex;
     padding: 16px 12px 12px 12px;
-    grid-column: 2 / 5 ;
+    grid-column: 2 / 5;
     grid-row: 2 / 4;
     width: 100%;
     height: 100%;
@@ -66,111 +65,112 @@ body{
 
 }
 
-@media screen and (width <= 450px)  {
-  
-    .App >main{
-      grid-column: 1 / 5 ;
-    }
+@media screen and (width <=450px) {
+
+  .App>main {
+    grid-column: 1 / 5;
   }
+}
 
 
 
-@media screen and (width <= 1200px) {
-  .App{
+@media screen and (width <=1200px) {
+  .App {
     grid-template-columns: 80px 1fr 0px 280px;
   }
 }
 
-br{
-    content: '';
-    display: flex;
-    height: 1px;
-    width: 90%;
-    align-self: center;
-    background: linear-gradient(90deg, rgba(0,0,0,0) 0%, rgba(255, 255, 255, 0.171) 45%,  rgba(0,0,0,0) 100%);
+.App:not(.LoadingScreen) br {
+  content: '';
+  display: flex;
+  height: 1px;
+  width: 90%;
+  align-self: center;
   
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, rgba(255, 255, 255, 0.171) 45%, rgba(0, 0, 0, 0) 100%);
 }
 
-.wrapperFlex{
+.wrapperFlex {
   display: flex;
   align-items: center;
   gap: 3px;
 }
 
-.wrapperVerticalFlex{
+.wrapperVerticalFlex {
   display: flex;
   flex-direction: column;
 }
 
-.icon{
+.icon {
   height: 16px;
 }
 
-.icon-small{
+.icon-small {
   height: 11px;
 }
 
-.flexExtend{
+.flexExtend {
   flex: 1;
 }
 
 
-.fontController{
+.fontController {
   font-family: "Controller W01 One";
   letter-spacing: 2px;
 }
 
-.primary-text{
+.primary-text {
   color: var(--Color-Primary);
 }
 
 
 ::-webkit-scrollbar {
-  width: 2px; 
-  height: 2px; 
+  width: 2px;
+  height: 2px;
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: var(--Color-Primary); 
+  background-color: var(--Color-Primary);
 }
 
 ::-webkit-scrollbar-track {
-  background-color: transparent; 
-  border-radius: 2px; 
+  background-color: transparent;
+  border-radius: 2px;
 }
 
 ::-webkit-scrollbar-horizontal {
-  height: 2px; 
+  height: 2px;
 }
 
 html {
-  scrollbar-width: thin; 
-  scrollbar-color: var(--Color-Primary); 
+  scrollbar-width: thin;
+  scrollbar-color: var(--Color-Primary);
 }
 
-@media screen and (width <= 600px) {
+@media screen and (width <=600px) {
   .hide-sm {
     display: none;
   }
-  
+
 }
 
-@media screen and (width > 600px) and (width <= 1200px) {
+@media screen and (width > 600px) and (width <=1200px) {
   .hide-md {
     display: none;
   }
-  
+
 }
 
-@media screen and (width > 1200px) and (width <= 1800px) {
+@media screen and (width > 1200px) and (width <=1800px) {
   .hide-md {
     display: none;
   }
-  
+
 }
 
-@media screen and (width <= 450px) {
-  .App{
+@media screen and (width <=450px) {
+  .App {
     grid-template-columns: 80px 1fr 0px 200px;
   }
 }
+
