@@ -3,7 +3,9 @@ import "./logo.css"
 const Logo = (() => {
 
     const toggleSidebar = () => {
-        if(window.innerWidth < 650)
+        const elArrowInverted = document.querySelector('#arrowWrapper .arrowInverted');
+
+        if(window.innerWidth < 650 || !elArrowInverted)
             return;
 
         const el = document.querySelector('#SidebarLeft');
@@ -16,9 +18,9 @@ const Logo = (() => {
     return <div id="Logo">
             <img id="LogoImg" src="logo.png"/>
             <h2 className="fontController">ORBET</h2>
-            <div id="arrowWrapper">
+            <div id="arrowWrapper" onClick={toggleSidebar}>
                 <i className="orbeticon-arrowleft arrow"></i>
-                <i className="orbeticon-arrowleft arrow arrowInverted" onClick={toggleSidebar}></i>
+                <i className="orbeticon-arrowleft arrow arrowInverted"></i>
             </div>
         </div>
 
