@@ -11,7 +11,7 @@
     max-width: 98dvw;
     max-height: 95dvh;
     transition: width var(--Animation-speed) ease-in-out;
-    z-index: 3;
+    z-index: 6;
     
     filter: drop-shadow(1px -1px 0px var(--Color-Primary-Fade));
 
