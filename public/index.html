@@ -43,12 +43,8 @@
       display: flex;
     }
 
-    body.Loading #LoadingScreen {
-      opacity: 1;
-
-    }
-
     body.Loading #LoadingWrapper {
+      opacity: 1;
       display: flex;
       gap: 12px;
       align-items: center;
@@ -59,19 +55,6 @@
       }
 
     }
-
-    body.Loading #LoadingWrapper::after {
-      content: '';
-      position: absolute;
-      width: 20px;
-      height: 20px;
-      background-color: rgba(255, 255, 255, 1);
-      border-radius: 50%;
-
-      filter: blur(30px) drop-shadow(0px 0px 5px white) drop-shadow(0px 0px 5px white);
-      animation: LoadingAnimation 1s infinite ease-in-out;
-    }
-
 
     @keyframes LoadingAnimation {
       0% {
@@ -91,6 +74,19 @@
         opacity: 0;
       }
     }
+
+    body.Loading #LoadingWrapper::after {
+      content: '';
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background-color: rgba(255, 255, 255, 1);
+      border-radius: 50%;
+
+      filter: blur(30px) drop-shadow(0px 0px 5px white) drop-shadow(0px 0px 5px white);
+      animation: LoadingAnimation 1s infinite ease-in-out;
+    }
+
   </style>
 </head>
 
