@@ -1,10 +1,10 @@
 import "./SideBarLeft.css";
 
-import Logo from "../elements/logo/logo";
-import Badge from "../elements/widgetsSidebar/badge/badge";
-import ProfileIcon from "../elements/widgetsSidebar/profileIcon/profileIcon";
-import ButtonSidebar from "../elements/buttonSidebar/buttonSidebar";
-import ButtonElevated from "../elements/buttonElevated/buttonElevated";
+import Logo from "../../components/logo/logo";
+import Badge from "../../components/badge/badge";
+import ProfileIcon from "../../components/profileIcon/profileIcon";
+import ButtonSidebar from "../../components/buttonSidebar/buttonSidebar";
+import ButtonElevated from "../../components/buttonElevated/buttonElevated";
 import { useState } from "react";
 
 const SideBarLeft = (() => {

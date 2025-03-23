@@ -1,7 +1,7 @@
 import "./badge.css";
-import LoadingBar from '../../loadingBar/loadingBar'
+import LoadingBar from '../loadingBar/loadingBar'
 import { useContext } from "react";
-import { ProjectContext } from "../../../../contexts/ProjectContext";
+import { ProjectContext } from "../../domains/project/ProjectContext";
 
 const Badge = (() => {
 

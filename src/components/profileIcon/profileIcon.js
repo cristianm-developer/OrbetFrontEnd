@@ -1,6 +1,6 @@
 import { useContext } from 'react';
 import './profileIcon.css';
-import { UserContext } from '../../../../contexts/UserContext';
+import { UserContext } from '../../domains/auth/UserContext';
 
 
 const ProfileIcon = (() => {

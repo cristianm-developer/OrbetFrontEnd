@@ -1,11 +1,11 @@
 import './App.css';
 import './fonts/orbeticons/orbeticonspack.css';
 
-import SideBarLeft from './components/SideBarLeft/SideBarLeft';
-import SideBarRight from './components/SideBarRight/SideBarRight';
-import TopBar from './components/TopBar/TopBar';
-import { UserProvider } from './contexts/UserContext';
-import { ProjectProvider } from './contexts/ProjectContext';
+import SideBarLeft from './core/SideBarLeft/SideBarLeft';
+import SideBarRight from './core/SideBarRight/SideBarRight';
+import TopBar from './core/TopBar/TopBar';
+import { UserProvider } from './domains/auth/UserContext';
+import { ProjectProvider } from './domains/project/ProjectContext';
 import { BrowserRouter } from 'react-router-dom';
 import RouterView from './routes';
 

@@ -29,7 +29,6 @@ body{
 
   --Animation-speed: .2s;
 
-
   display: flex;
   height: 100%;
   width: 100%;
@@ -40,6 +39,8 @@ body{
     box-sizing: content-box;
   }
 }
+
+
 
 .App{
   width: 100%;
@@ -52,6 +53,8 @@ body{
   overflow: hidden;
   position: relative;
 
+
+
   >main{
     z-index: 1;
     display: flex;
@@ -63,6 +66,11 @@ body{
   }
 }
 
+@media screen and (width <= 1200px) {
+  .App{
+    grid-template-columns: 80px 1fr 0px 280px;
+  }
+}
 
 br{
     content: '';
@@ -129,4 +137,25 @@ br{
 html {
   scrollbar-width: thin; 
   scrollbar-color: var(--Color-Primary); 
+}
+
+@media screen and (width <= 600px) {
+  .hide-sm {
+    display: none;
+  }
+  
+}
+
+@media screen and (width > 600px) and (width <= 1200px) {
+  .hide-md {
+    display: none;
+  }
+  
+}
+
+@media screen and (width > 1200px) and (width <= 1800px) {
+  .hide-md {
+    display: none;
+  }
+  
 }

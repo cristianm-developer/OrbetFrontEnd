@@ -56,12 +56,12 @@
 
 .orbeticon-arrowdown1:before { content: '\e800'; width: unset;} /* '' */
 .orbeticon-arrowleft:before { content: '\e801'; } /* '' */
-.orbeticon-bell:before { content: '\e802'; } /* '' */
+.orbeticon-bell:before { content: '\e802'; scale: 1.2;} /* '' */
 .orbeticon-copy:before { content: '\e803'; } /* '' */
 .orbeticon-compasssquare:before { content: '\e804'; } /* '' */
 .orbeticon-cupstar:before { content: '\e805'; } /* '' */
 .orbeticon-crownminimalistic:before { content: '\e806'; } /* '' */
-.orbeticon-dialog:before { content: '\e807'; } /* '' */
+.orbeticon-dialog:before { content: '\e807'; scale: 1.3; } /* '' */
 .orbeticon-headphonesroundsound:before { content: '\e808'; } /* '' */
 .orbeticon-moneybag:before { content: '\e809'; } /* '' */
 .orbeticon-home2:before { content: '\e80a'; } /* '' */
@@ -84,3 +84,4 @@
 .orbeticon-bitcoin:before { content: '\e81c'; } /* '' */
 .orbeticon-startsminimalistic:before { content: '\e81d'; } /* '' */
 .orbeticon-ticketsale:before { content: '\e81f'; } /* '' */
+.orbeticon-suspensivepoints:before { content: '\e81e'; scale: .4; margin: 0; translate: -50% 0; } /* '' */

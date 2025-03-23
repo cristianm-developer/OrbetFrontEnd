@@ -1,7 +1,6 @@
-import ButtonBase from '../elements/buttonBase/buttonBase';
-import ButtonSidebar from '../elements/buttonSidebar/buttonSidebar';
-import Badge from '../elements/widgetsSidebar/badge/badge';
-import ProfileIcon from '../elements/widgetsSidebar/profileIcon/profileIcon';
+import ButtonSidebar from '../../components/buttonSidebar/buttonSidebar';
+import Badge from '../../components/badge/badge';
+import ProfileIcon from '../../components/profileIcon/profileIcon';
 import './SideBarRight.css';
 
 const SideBarRight = (() => 
@@ -14,7 +13,7 @@ const SideBarRight = (() =>
             <Badge></Badge>
         </section>
         <br></br>
-        <section className='flexExtend'>
+        <section className='flexExtend buttonsWrapper'>
             <ButtonSidebar name='My Wallet' iconClassname='orbeticon-wallet'></ButtonSidebar>
             <ButtonSidebar name='Vault' iconClassname='orbeticon-moneybag'></ButtonSidebar>
             <ButtonSidebar name='Affiliate Program' iconClassname='orbeticon-handstars'></ButtonSidebar>
