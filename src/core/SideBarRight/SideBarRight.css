@@ -53,7 +53,7 @@
     pointer-events: all;
 }
 
-@media screen and (width <= 450px) {
+@media screen and (width <= 650px) {
     #SideBarRight{
         position: absolute;
         right: 0;

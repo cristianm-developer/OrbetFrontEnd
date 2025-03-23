@@ -112,7 +112,7 @@
 }
 
 
-@media screen and (width <= 450px)  {
+@media screen and (width <= 650px)  {
     #SidebarLeft{
         height: 61px;
         position: absolute;

@@ -61,7 +61,7 @@
     
 }
 
-@media screen and (width <450px) {
+@media screen and (width <650px) {
     .arrow:not(.arrowInverted) {
         bottom: 20px !important;
     }
@@ -87,7 +87,7 @@
         max-width: 200px;
     }
 
-    @media screen and (width < 450px) {
+    @media screen and (width < 650px) {
         #arrowWrapper{
             pointer-events: none;
         }

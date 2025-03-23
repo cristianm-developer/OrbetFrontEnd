@@ -96,7 +96,6 @@
             z-index: 15;
             display: flex;
             opacity: 0;
-            pointer-events: none;
             flex-direction: column;
             gap: 8px;
             position: absolute;
