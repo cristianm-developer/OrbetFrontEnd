@@ -18,12 +18,16 @@ function App() {
     }, 1000);
   }, [])
 
+  const globalClickHandler = () => {
+
+  }
+
   return (
     <BrowserRouter>
       <UserProvider>
         <ProjectProvider>
           
-        <div className="App">
+        <div className="App" onClick={globalClickHandler}>
           <SideBarLeft></SideBarLeft>
           <TopBar></TopBar>
           <main>

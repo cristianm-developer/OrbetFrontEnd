@@ -1,24 +1,23 @@
+import { isTouchDevice, shrinkSidebarLeft } from "../../shared/UiControl";
 import "./logo.css"
 
-const Logo = (({sidebarExtended}) => {
+const Logo = (() => {
 
-    const toggleSidebar = () => {
-        const el = document.querySelector('#SidebarLeft');
-        if(el.classList.contains('extended')){
-            el.classList.add('hidding')
-            el.classList.remove('extended');
-            setTimeout(() => {
-                el.classList.remove('hidding');
-            }, 220);
-        }
-        else
-            el.classList.add('extended')
-    }
+const toggleSidebar = (event) => {
 
-    return <div id="Logo">
+    if(isTouchDevice())
+        return;
+
+    const el = document.querySelector('#SidebarLeft');
+    if(el.classList.contains('extended'))
+        shrinkSidebarLeft();
+
+}
+
+    return <div id="Logo" onTouchStart={toggleSidebar} onClick={toggleSidebar}> 
             <img id="LogoImg" src="logo.png"/>
             <h2 className="fontController">ORBET</h2>
-            <div id="arrowWrapper" onClick={toggleSidebar}>
+            <div id="arrowWrapper">
                 <i className="orbeticon-arrowleft arrow"></i>
                 <i className="orbeticon-arrowleft arrow arrowInverted" ></i>
             </div>

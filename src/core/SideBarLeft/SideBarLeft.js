@@ -5,28 +5,11 @@ import Badge from "../../components/badge/badge";
 import ProfileIcon from "../../components/profileIcon/profileIcon";
 import ButtonSidebar from "../../components/buttonSidebar/buttonSidebar";
 import ButtonElevated from "../../components/buttonElevated/buttonElevated";
+import { extendSidebarLeft, shrinkSidebarLeft } from "../../shared/UiControl";
 
 const SideBarLeft = (() => {
 
-    const extendSidebar = () => {
-        if(window.innerWidth < 650)
-            return
-        
-        const el = document.querySelector('#SidebarLeft');
-        if(!el.classList.contains('extended'))
-            el.classList.add('extended')
-    }
-
-    const shrinkSidebar = () => {
-        if(window.innerWidth < 650)
-            return
-        
-        const el = document.querySelector('#SidebarLeft');
-        if(el.classList.contains('extended'))
-            el.classList.remove('extended')
-    }
-
-    return <aside id="SidebarLeft" className={`shadownTopRight`} onMouseEnter={extendSidebar} onMouseLeave={shrinkSidebar}>
+    return <aside id="SidebarLeft" className={`shadownTopRight`} onMouseEnter={extendSidebarLeft} onMouseLeave={shrinkSidebarLeft}>
         
         <Logo></Logo>
         
