@@ -62,3 +62,8 @@
         z-index: 12;
     }
   }
+
+  .badgeWrapper{
+    padding: 12px 0;
+    height: 135px !important;
+  }

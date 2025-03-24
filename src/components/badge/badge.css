@@ -79,7 +79,7 @@ a.badge{
 
 
 .extended a.badge, #SidebarLeft:hover a.badge{
-    height: 130px;
+    height: 100px;
     
     .badgeImage{
         width: 55px;

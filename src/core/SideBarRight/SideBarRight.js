@@ -9,7 +9,7 @@ const SideBarRight = (() =>
             <ProfileIcon></ProfileIcon>
         </section>
         <br></br>
-        <section>
+        <section className='badgeWrapper'>
             <Badge></Badge>
         </section>
         <br></br>
